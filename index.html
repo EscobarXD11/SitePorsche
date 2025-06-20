@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Porsche</title>
+</head>
+
+<body onresize="mudouTamanho()">
+  <!-- Cabeçalho -->
+  <header class="container-cabecalho">
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+    <nav id="itens">
+        <span id="fechar" class="material-symbols-outlined" onclick="clickMenu()">close</span>
+
+      <ul>
+     <li><a href="#">Início</a></li>
+     <li><a href="#">Modelos</a></li>
+     <li><a href="#">História</a></li>
+     <li><a href="#">Galeria</a></li>
+     <li><a href="#">Contato</a></li>
+     </ul>
+    </nav>
+    <div class="texto-header">
+    <h1>PORSCHE</h1>
+<a id="sub" href="#">Descubra o 911 Carrera GTS</a></div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+
+    <h2 id="slogan">Nascido para correr, criado para impressionar!</h2>
+    <!-- Seção de tópicos -->
+    <section class="topicos-porsche">
+
+    <article class="card">
+        <h2>Performance Incomparável</h2>
+        <img id="card2" src="midias/vehicle_image_1743563963_d41d8cd98f00b204e9800998ecf8427e.webp" alt="Porsche em pista" />
+        <p>Motores potentes, engenharia de precisão e tecnologia de ponta. A Porsche entrega velocidade, controle e emoção ao dirigir como nenhuma outra.</p>
+      </article>
+
+      <article id="card2" class="card">
+        <h2>Design Atemporal</h2>
+        <img id="img2" src="midias/9922_54.webp" alt="Porsche clássico" />
+        <p>O estilo da Porsche combina elegância com esportividade. Cada linha do carro é pensada para desempenho e beleza — um ícone que atravessa gerações.</p>
+      </article>
+
+      <article class="card">
+        <h2>Inovação e Sustentabilidade</h2>
+        <img id="img3" src="midias/2020-porsche-taycan.jpg" alt="Porsche Taycan" />
+        <p>Com modelos como o Taycan, a Porsche une tradição e futuro — apostando em veículos elétricos sem perder o DNA esportivo.</p>
+      </article>
+    </section>
+    
+
+<section class="hero">
+ <div class="carro">
+  <h1 >"Velocidade, Estilo e Inovação."
+Treinando com o melhor do design automotivo.</h1>
+ </div>
+ 
+</section>
+<h2 id="texto-viagem">Sua viagem com o Porsche começa agora.</h2>
+
+
+<section class="topico-viagem">
+
+
+  <article class="card911">
+  <h2>911</h2>
+  <p>Icônico carro esportivo de 2 portas com motor traseiro.</p>
+  </article>
+
+   <article class="card718">
+  <h2>718</h2>
+  <p>Carro esportivo de 2 lugares com motor central.</p>
+  </article>
+
+  <article class="cardtaycan">
+<h2>Taycan</h2>
+<p>Elétrico desportivo de 4 portas, 4/5 lugares.</p>
+  </article>
+
+  <article class="cardpanamera">
+    <h2>Panamera</h2>
+    <p>Sedan de luxo de elevado com conforto, 4 portas, 4 lugares.</p>
+    </article>
+
+     <article class="cardmacan">
+    <h2>Macan</h2>
+    <p>SUV compacto desportivo de 4 portas e 5 lugares.</p>
+ </article>
+
+     <article class="cardcayenne">
+    <h2>Cayenne</h2>
+    <p>SUV versátil até 5 lugares.</p>
+     </article>
+
+</section>
+
+<section class="frase-final">
+  <h2>"Dirigir um Porsche não é apenas chegar ao destino — é viver cada segundo da jornada."
+  </h2>
+  <p>🌟 Sinta a emoção. Viva a performance. Descubra o legado.</p>
+  <button>Entre em Contato</button>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Site criado por <a href="https://www.instagram.com/wesley_escobar11/">Wesley Escobar</a> para seu <a href="https://github.com/EscobarXD11">GitHub.</a></p>
+
+  </footer>
+
+
+
+
+  <!-- Rodapé futuro -->
+  <!-- <footer>
+    <p>&copy; 2025 - Criado para fins de estudo.</p>
+  </footer> -->
+
+<script>
+  function clickMenu(){
+   if(itens.style.display =='block') {
+    itens.style.display = 'none'
+   } else {
+    itens.style.display = 'block'
+   }
+
+  }
+
+  function mudouTamanho() {
+    if(window.innerWidth >= 768) {
+      itens.style.display = 'block'
+    } else {
+      itens.s.display = 'none'
+            body.classList.remove('no-scroll');
+    }
+  }
+</script>
+
+</body>
+
+</html>

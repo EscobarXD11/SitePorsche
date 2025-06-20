@@ -62,16 +62,16 @@
   }
 
   /* Header com imagem de fundo */
-header {
-  background-image: url(midias/header.jpg);
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  min-height: 100vh;
-  position: relative;
+  header {
+    background-image: url(midias/header.jpg);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 100vh;
+    position: relative;
     box-shadow: 0px 0px 10px black;
 
-}
+  }
 
   /* Título centralizado no header */
   header h1 {
@@ -88,8 +88,8 @@ header {
     display: block;
     width: 60%;
     margin: auto;
-text-align: center;
-margin-top: 370px;
+    text-align: center;
+    margin-top: 440px;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -131,8 +131,8 @@ margin-top: 370px;
     padding: 20px;
     transition: transform 0.3s ease;
     text-align: center;
-    padding-right: 70px;
-        padding-left: 70px;
+    padding-right: 30px;
+    padding-left: 30px;
 
   }
 
@@ -141,7 +141,7 @@ margin-top: 370px;
   }
 
   .card img {
-    width: 100%;
+    width: 320px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -164,26 +164,111 @@ margin-top: 370px;
     height: auto;
   }
 
-.hero {
-  background-image: url(midias/Porsche-Mobile-Wallpaper-4k.jpg);
-  background-size: cover;
-  background-position: center center;
-height: 400px;
+  .hero {
+    background-image: url(midias/Porsche-Mobile-Wallpaper-4k.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 450px;
     box-shadow: 0px 0px 10px black;
     margin-top: 30px;
-}
+  }
 
-.hero h1 {
-  text-align: center;
+  .hero h1 {
+    text-align: center;
+    position: relative;
+    padding-top: 17px;
+    color: white;
+    text-shadow: 1px 1px 10px black;
+  }
+
+  #texto-viagem {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+
+.topico-viagem {
   position: relative;
-  padding-top: 30px;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px; /* espaçamento entre cards */
+}
+
+.topico-viagem article {
+  min-width: 315px;
+  max-width: 315px; 
+  height: 200px;
+  padding: 16px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  text-shadow: 1px 1px 10px black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  position: relative;
 }
 
-#texto-viagem {
-  text-align: center;
-  margin-top: 30px;
+/* Escurece o fundo para o texto aparecer bem */
+.topico-viagem article::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  z-index: 0;
 }
 
+.topico-viagem article h2,
+.topico-viagem article p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+#prev { left: 20px; }
+#next { right: 20px; }
+
+/* Fundos dos cards */
+.card911       { background-image: url('midias/911.jpg');
+width: 90%; }
+.card717       { background-image: url(midias/718.webp);
+width: 80%;
+ }
+.cardtaycan    { background-image: url('midias/taycan.jpg');
+ }
+.cardpanamera  { background-image: url('midias/panamera.jpg'); }
+.cardmacan     { background-image: url('midias/macan.jpg'); 
+  max-width: 400px;
+}
+.cardcayenne   { background-image: url(midias/cayene.jpg);
+width: 30%;
+}
 }

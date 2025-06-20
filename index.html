@@ -67,39 +67,42 @@ Treinando com o melhor do design automotivo.</h1>
 
 
 <section class="topico-viagem">
+  <button id="prev" class="carousel-nav">&#10094;</button>
+  <button id="next" class="carousel-nav">&#10095;</button>
 
-
-  <article class="card911">
-  <h2>911</h2>
-  <p>Icônico carro esportivo de 2 portas com motor traseiro.</p>
-  </article>
-
-   <article class="card718">
-  <h2>718</h2>
-  <p>Carro esportivo de 2 lugares com motor central.</p>
-  </article>
-
-  <article class="cardtaycan">
-<h2>Taycan</h2>
-<p>Elétrico desportivo de 4 portas, 4/5 lugares.</p>
-  </article>
-
-  <article class="cardpanamera">
-    <h2>Panamera</h2>
-    <p>Sedan de luxo de elevado com conforto, 4 portas, 4 lugares.</p>
+  <div class="carousel-container" id="carousel">
+    <article class="card911">
+      <h2>911</h2>
+      <p>Icônico carro esportivo de 2 portas com motor traseiro.</p>
     </article>
 
-     <article class="cardmacan">
-    <h2>Macan</h2>
-    <p>SUV compacto desportivo de 4 portas e 5 lugares.</p>
- </article>
+    <article class="card717">
+      <h2>718</h2>
+      <p>Carro esportivo de 2 lugares com motor central.</p>
+    </article>
 
-     <article class="cardcayenne">
-    <h2>Cayenne</h2>
-    <p>SUV versátil até 5 lugares.</p>
-     </article>
+    <article class="cardtaycan">
+      <h2>Taycan</h2>
+      <p>Elétrico desportivo de 4 portas, 4/5 lugares.</p>
+    </article>
 
+    <article class="cardpanamera">
+      <h2>Panamera</h2>
+      <p>Sedan de luxo de elevado conforto, 4 portas, 4 lugares.</p>
+    </article>
+
+    <article class="cardmacan">
+      <h2>Macan</h2>
+      <p>SUV compacto desportivo de 4 portas e 5 lugares.</p>
+    </article>
+
+    <article class="cardcayenne">
+      <h2>Cayenne</h2>
+      <p>SUV versátil até 5 lugares.</p>
+    </article>
+  </div>
 </section>
+
 
 <section class="frase-final">
   <h2>"Dirigir um Porsche não é apenas chegar ao destino — é viver cada segundo da jornada."
@@ -143,6 +146,25 @@ Treinando com o melhor do design automotivo.</h1>
   }
 </script>
 
+<script>
+const carousel = document.getElementById('carousel');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let scrollAmount = 0;
+const scrollStep = 365;
+
+nextBtn.onclick = () => {
+  scrollAmount += scrollStep;
+  carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+};
+
+prevBtn.onclick = () => {
+  scrollAmount -= scrollStep;
+  if (scrollAmount < 0) scrollAmount = 0;
+  carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+};
+</script>
 </body>
 
 </html>

@@ -76,7 +76,7 @@ header {
   /* Título centralizado no header */
   header h1 {
     text-align: center;
-    margin-top: 129px;
+    margin-top: 60px;
     color: white;
     font-size: 3em;
     padding: 0 20px;
@@ -86,10 +86,10 @@ header {
   /* Botão do header */
   .texto-header a {
     display: block;
-    width: 40%;
+    width: 60%;
     margin: auto;
 text-align: center;
-margin-top: 600px;
+margin-top: 370px;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -161,15 +161,14 @@ margin-top: 600px;
   /* Ajuste de altura para imagens específicas */
   #img2,
   #img3 {
-    height: 240px;
+    height: auto;
   }
 
 .hero {
   background-image: url(midias/Porsche-Mobile-Wallpaper-4k.jpg);
-  height: 600px;
   background-size: cover;
-  background-position: center -300px;
-  background-repeat: no-repeat;
+  background-position: center center;
+height: 500px;
     box-shadow: 0px 0px 10px black;
     margin-top: 30px;
 }

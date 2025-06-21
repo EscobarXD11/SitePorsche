@@ -44,6 +44,7 @@
 
   #itens li {
     margin: 20px 0;
+    padding: 12px;
   }
 
   #itens a {
@@ -70,6 +71,7 @@
     min-height: 100vh;
     position: relative;
     box-shadow: 0px 0px 10px black;
+    
 
   }
 
@@ -81,6 +83,9 @@
     font-size: 3em;
     padding: 0 20px;
     text-shadow: 1px 1px 10px black;
+    font-family: 'Orbitron', sans-serif;
+
+
   }
 
   /* Botão do header */
@@ -89,20 +94,24 @@
     width: 60%;
     margin: auto;
     text-align: center;
-    margin-top: 440px;
+    margin-top: 390px;
     text-align: center;
     text-decoration: none;
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     padding: 14px 20px;
     border-radius: 20px;
     font-size: 1em;
+    border: 2px solid grey;
+    text-shadow: 0px 0px 1px black;
     transition: background-color 0.3s ease, color 0.3s ease;
+
   }
 
   .texto-header a:hover {
-    background-color: #ff6e0d;
-    color: #000;
+    background-color: #ff511c;
+    border: 2px solid rgb(255, 116, 2);
+
   }
 
   /* Slogan */
@@ -128,11 +137,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     max-width: 400px;
-    padding: 20px;
+    padding: 15px;
     transition: transform 0.3s ease;
     text-align: center;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
 
   }
 
@@ -187,88 +196,169 @@
   }
 
 
-.topico-viagem {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 20px;
-  box-sizing: border-box;
-}
+  .topico-viagem {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-.carousel-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px; /* espaçamento entre cards */
-}
+  .carousel-container {
+    padding-top: 10px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    /* espaçamento entre cards */
+  }
 
-.topico-viagem article {
-  min-width: 315px;
-  max-width: 315px; 
-  height: 200px;
-  padding: 16px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  position: relative;
-}
+  .topico-viagem article {
+    min-width: 315px;
+    max-width: 315px;
+    height: 200px;
+    padding: 16px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
 
-/* Escurece o fundo para o texto aparecer bem */
-.topico-viagem article::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 10px;
-  z-index: 0;
-}
+  /* Escurece o fundo para o texto aparecer bem */
+  .topico-viagem article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    z-index: 0;
+  }
 
-.topico-viagem article h2,
-.topico-viagem article p {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
-}
+  .topico-viagem article h2,
+  .topico-viagem article p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  }
 
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #000;
-  color: #ffffff;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border: none;
-  font-size: 18px;
-  border-radius: 50%;
-}
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    font-size: 18px;
+    border-radius: 50%;
+  }
 
-#prev { left: 20px; }
-#next { right: 20px; }
+  #prev {
+    left: 20px;
+  }
 
-/* Fundos dos cards */
-.card911       { background-image: url('midias/911.jpg');
-width: 90%; }
-.card717       { background-image: url(midias/718.webp);
-width: 80%;
- }
-.cardtaycan    { background-image: url('midias/taycan.jpg');
- }
-.cardpanamera  { background-image: url('midias/panamera.jpg'); }
-.cardmacan     { background-image: url('midias/macan.jpg'); 
-  max-width: 400px;
-}
-.cardcayenne   { background-image: url(midias/cayene.jpg);
-width: 30%;
-}
+  #next {
+    right: 20px;
+  }
+
+  /* Fundos dos cards */
+  .card911 {
+    background-image: url('midias/911.jpg');
+    width: 90%;
+  }
+
+  .card717 {
+    background-image: url(midias/718.webp);
+    width: 80%;
+  }
+
+  .cardtaycan {
+    background-image: url('midias/taycan.jpg');
+  }
+
+  .cardpanamera {
+    background-image: url('midias/panamera.jpg');
+  }
+
+  .cardmacan {
+    background-image: url('midias/macan.jpg');
+    max-width: 400px;
+  }
+
+  .cardcayenne {
+    background-image: url(midias/cayene.jpg);
+    width: 30%;
+  }
+
+  .frase-final h2 {
+    text-align: center;
+    padding-top: 15px;
+
+  }
+
+  .frase-final p {
+    text-align: center;
+    padding-top: 13px;
+  }
+
+  .frase-final button {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fd8828;
+    border: 1px solid rgb(255, 123, 0);
+    color: #ffffff;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+  }
+
+  .frase-final button:hover {
+    background-color: rgb(255, 101, 41);
+    border: 2px solid rgb(255, 116, 2);
+    color: white;
+
+  }
+
+  footer {
+    display: block;
+    margin-top: 25px;
+    width: 100%;
+    background-color: #555555;
+    padding: 20px;
+  }
+
+  footer p {
+    margin: auto;
+    color: white;
+    font-size: 1.0em;
+
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.0em;
+
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
 }
